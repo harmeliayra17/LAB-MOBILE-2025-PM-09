@@ -17,7 +17,7 @@ _Untuk perintah yang dibungkus < > maka perintah tersebut diganti sesuai instruk
   ```
   mkdir <NIM>
   ```
-- Di dalam folder NIM tersebut, kalian menambahkan file tugas praktikum yang telah kalian kerjakan
+- Di dalam folder NIM tersebut, kalian menambahkan folder file tugas praktikum yang telah kalian kerjakan
 - Setelah semua file tugas telah diselesaikan dan telah diasistensikan lakukan perintah berikut
   ```
   git add .

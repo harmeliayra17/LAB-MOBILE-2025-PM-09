@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginEnd="12dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageHighlight"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="4dp"
+        android:padding="6dp"
+        android:background="@drawable/highlight_circle_double_border"
+        android:src="@drawable/sorotan1"
+        android:contentDescription="Highlight"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/textHighlightName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highlight"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+
+</LinearLayout>

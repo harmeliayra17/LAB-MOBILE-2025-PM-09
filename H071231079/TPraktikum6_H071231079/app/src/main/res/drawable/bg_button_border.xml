@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Enabled state: putih background + border biru tua -->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <stroke
+                android:width="2dp"
+                android:color="#272862"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    <!-- Disabled state: abu‑abu background + border abu tua -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#B0B0B0"/>  <!-- abu terang -->
+            <stroke
+                android:width="2dp"
+                android:color="#888888"/>      <!-- border abu tua -->
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+</selector>

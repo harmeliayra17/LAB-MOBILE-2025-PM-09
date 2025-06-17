@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="horizontal">
+
+        <!-- Book Cover -->
+        <ImageView
+            android:id="@+id/bookCover"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/book1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Closer to Nowhere"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <!-- Author -->
+            <TextView
+                android:id="@+id/bookAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ellen Hopkins"
+                android:textColor="#888888"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="0dp"/>
+
+            <!-- Rating -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/star"
+                    android:tint="#FFC107" />
+
+                <TextView
+                    android:id="@+id/bookRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="4.2"
+                    android:textColor="#EFB507"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Genre -->
+            <TextView
+                android:id="@+id/bookGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_genre_selected"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="3dp"
+                android:text="Romance"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/bookDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="2"
+                android:text="Clara dan Riley tumbuh di bawah atap keluarga yang penuh rahasia..."
+                android:textColor="#444444"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

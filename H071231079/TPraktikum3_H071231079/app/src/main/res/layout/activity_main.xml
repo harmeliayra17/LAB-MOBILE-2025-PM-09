@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/logoInstagram"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ig_logo"
+                    android:contentDescription="logo instagram"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitCenter" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/btnLike"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/likes"
+                    android:contentDescription="Like" />
+
+                <ImageView
+                    android:id="@+id/btnChat"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/msg"
+                    android:contentDescription="Chat" />
+            </LinearLayout>
+
+            <!-- Story RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <!-- Post RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:paddingHorizontal="8dp"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/item_home"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/whome" />
+
+        <ImageView
+            android:id="@+id/item_search"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:contentDescription="Search"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/item_post"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:contentDescription="Post"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/post" />
+
+        <ImageView
+            android:id="@+id/item_reels"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:contentDescription="Reels"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reels" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageProfile2"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/profile1"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

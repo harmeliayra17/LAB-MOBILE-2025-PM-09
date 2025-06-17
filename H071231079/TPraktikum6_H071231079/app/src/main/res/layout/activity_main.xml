@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Rick and Morty Characters"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:background="@drawable/rounded_text"
+        android:textColor="#272862" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCharacters"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/tvOfflineStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_border"
+        android:text="Gagal memuat data. Periksa koneksi internet Anda."
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnLoadMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load More"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_button_border"
+        android:padding="12dp"
+        android:enabled="false"
+        android:textColor="#272862"
+        android:fontFamily="@font/poppins_bold"/>
+
+
+
+</LinearLayout>

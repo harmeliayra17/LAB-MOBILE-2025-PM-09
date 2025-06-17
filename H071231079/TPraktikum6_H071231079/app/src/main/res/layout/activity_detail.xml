@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <!-- Card putih dengan sudut membulat -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDetail"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvDetailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rick Sanchez"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#272862"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"/>
+
+            <!-- Spacer kecil -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <!-- Circular Image -->
+            <ImageView
+                android:id="@+id/imgDetailAvatar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ricknmorty"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_profile"
+                android:clipToOutline="true"
+                />
+
+            <!-- Spacer kecil -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp"/>
+
+            <!-- Detail fields -->
+            <TextView
+                android:id="@+id/tvDetailStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status  : Alive"
+                android:textSize="18sp"
+                android:textColor="#272862"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Species : Human"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                android:textColor="#272862"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Gender  : Male"
+                android:textSize="18sp"
+                android:textColor="#272862"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

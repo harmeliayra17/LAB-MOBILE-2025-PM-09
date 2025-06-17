@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/rounded_book">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textAddBookTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Book"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Image Picker Card -->
+        <ImageView
+            android:id="@+id/cardImagePicker"
+            android:layout_width="200dp"
+            android:layout_height="302dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="false"
+            android:src="@drawable/add_image"
+            android:contentDescription="Click to pick cover" />
+
+
+        <!-- Title Book -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title Book"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/inputTitle"
+            style="@style/PillEditText"
+            android:hint="Isi Judul"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Author -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Author"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/inputAuthor"
+            style="@style/PillEditText"
+            android:hint="Isi Penulis"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Year & Rating -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="4dp"/>
+                <EditText
+                    android:id="@+id/inputYear"
+                    style="@style/PillEditText"
+                    android:hint="Isi Tahun"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="4dp"/>
+                <EditText
+                    android:id="@+id/inputRating"
+                    style="@style/PillEditText"
+                    android:hint="4.0 - 5.0"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Genre Spinner -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Genre"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Other Genre Input -->
+        <Spinner
+            android:id="@+id/spinnerGenre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/pill_spinner"
+            android:paddingHorizontal="14dp" />
+
+        <EditText
+            android:id="@+id/inputOtherGenre"
+            style="@style/PillEditText"
+            android:hint="Isi Genre Disini"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Sinopsis -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sinopsis"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/inputDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/pill_input_multilline"
+            android:padding="16dp"
+            android:gravity="top"
+            android:textSize="14sp"
+            android:hint="Isi Sinopsis"
+            android:fontFamily="@font/poppins_medium"
+            android:textColorHint="#CCCCCC"
+            android:textColor="@color/white"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonAddBook"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Add Book"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_genre_selected"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="14dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<!-- res/drawable/pill_input_multiline.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Fill putih agar teks kontras -->
+    <solid android:color="#000000"/>
+
+    <!-- Outline tipis abu-abu -->
+    <stroke
+        android:width="1dp"
+    />
+
+    <!-- Sudut membulat mirip pill -->
+    <corners android:radius="16dp"/>
+</shape>
